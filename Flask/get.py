@@ -38,11 +38,11 @@ def dashboard(name):
 def getmail():
     if request.method == 'POST':
         name = request.form['name']
-        user = db.execute("select * from data where nombre = %s", (name,))
+        user = db.execute("select * FROM data where Nombre = %s", (name,))
         return redirect(url_for('dashboard', name=user))
     else:
         user = request.args.get('name')
-        return render_template('login.html')
+        return render_template('getmail.html')
 
 
 @app.route('/addmail', methods=['POST', 'GET'])
