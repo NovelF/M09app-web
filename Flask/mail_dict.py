@@ -1,3 +1,5 @@
+import mysql.connector
+
 #definim en una variable de tipus dict, la clau serà el nom i el valor serà el email
 #posem els noms i els correus electrònics de la classe
 diccionari = {
@@ -24,6 +26,13 @@ diccionari = {
         "Aaron": "aaron@gmail.com",
         "Moad": "moad@gmail.com",
         }
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="novel",
+  password="1234",
+  database="webdb"
+)
 
 #CONSTANTS pel resultat de les fucions
 NOTROBAT = "NOTROBAT"

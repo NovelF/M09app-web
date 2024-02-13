@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello from Flask</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='edad.css')}}">
-</head>
+{% block header %}
+<h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
 
-<body>
-    <h1>Hola {{name}} tu mail {{mail}}, Ha sido creado</h1>
-</body>
-
-</html>
+{% block content %}
+<h1>Hola {{name}} tu mail {{mail}}, Ha sido creado</h1>
+{% endblock %}
